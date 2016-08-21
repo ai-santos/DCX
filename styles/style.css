@@ -41,17 +41,62 @@
 }
 
 body, html {
-  font-family: sans-serif;
   height: 100%;
   width: 100%;
   background-color: white;
 }
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
-    height: 50px;
-    background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  height: 50px;
+  background-color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav.overlay {
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  border-bottom: 1px solid
+}
+
+nav .logo {
+  width: 75px;
+  height: 75px;
+  background-image: url("../images/vfix-logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  flex-direction: row;
+  padding-left: 25px;
+}
+
+nav li a {
+  font-family: 'ralewaylight';
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+}
+
+nav.overlay li a {
+  color: black;
+}
+
+nav li a:hover {
+  color: black;
 }
 
 header.fixed {
@@ -61,8 +106,6 @@ header.fixed {
 }
 
 header {
-   /* background: linear-gradient(to left,rgba(54,194,182,0.96) 0,rgba(62,188,207,0.96) 100%);*/
-/*    background-color: #fff;*/
   box-shadow: 0 5px 5px rgba(0,0,0,0.2);
   border-bottom: 1px solid
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
@@ -90,18 +133,9 @@ header > nav > ul > li {
 }
 
 header > nav > ul > li:hover {
-  background: rgba(58,162,173,1);
+  background: rgba(255,255,255,1);
 }
 
-header > nav > ul > li a + div {
-  background: linear-gradient(to bottom,rgba(58,162,173,1) 0,rgba(62,188,207,0.96) 100%);;
-  border-radius: 0 0 2px 2px;
-  box-shadow: 0 3px 1px rgba(0,0,0,.05);
-  display: none;
-  font-size: 1rem;
-  position: absolute;
-  width: 195px;
-}
 
 header > nav > ul > li:hover a + div {
   display: block;
@@ -116,53 +150,27 @@ header > nav > ul > li a + div > ul > li {
   padding: 0;
 }
 
-header > nav > ul > li a + div > ul > li > a {
-  color: rgba(255,255,255,.9);
-  display: block;
-  font-size: .75rem;
-  letter-spacing: 1.5px;
-  padding: .25rem 1.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
 
 header > nav > ul > li a + div > ul > li:hover > a {
   background-color: rgba(0,0,0,.15);
-}
 
-header > nav > ul > li > a {
-  align-items: flex-start;
-  color: #fff;
-  display: flex;
-  font-size: 1.55rem;
-  font-weight: 200;
-  letter-spacing: 1px;
-  max-width: 130px;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  text-shadow: 0 1px 1px rgba(0,0,0,.1);
-  transition: all linear 0.1s;
-}
-
-header > nav > ul > li > a > div > span {
-  color: rgba(255,255,255,.75);
-  display: block;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: .7rem;
-  font-style: italic;
-  line-height: 1rem;
-  max-width: 260px;
 }
 
 @media (min-width: 990px) {
   header > nav > ul > li > a {
+    align-items: flex-start;
+    color: #fff;
+    display: flex;
+    font-family: 'ralewayregular';
+    font-size: 1.25rem;
+    font-weight: 200;
     max-width: 500px;
-    font-size: 1.7rem;
-  line-height: 2rem;
-  }
-
-  header > nav > ul > li > a > div > span {
-    margin: 4px 0 0;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0,0,0,.1);
+    transition: all linear 0.1s;
   }
 }
 
@@ -216,52 +224,6 @@ h1 {
   min-height: 100px;
 }*/
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-nav.overlay {
-  background-color: #fff;
-  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-  border-bottom: 1px solid
-}
-
-nav .logo {
-  width: 75px;
-  height: 75px;
-  background-image: url("../images/vfix-logo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-}
-
-nav li {
-  flex-direction: row;
-  padding-left: 25px;
-}
-
-nav li a {
-  font-family: 'ralewaylight';
-  text-decoration: none;
-  color: white;
-  font-size: 1.3em;
-}
-
-nav.overlay li a {
-  color: black;
-}
-
-nav li a:hover {
-  text-decoration: underline;
-  color: red;
-}
 
 img.center {
   display: block;
