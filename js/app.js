@@ -14,28 +14,28 @@ function setOverlay( yOffset ) {
   }
 }
 
-function zoomableDivs() {
-  return document.querySelectorAll( '.whyVFix div' );
-}
+// function zoomableDivs() {
+//   return document.querySelectorAll( '.whyVFix div' );
+// }
 
-function applyZoomOut( item ) {
-  item.classList.remove( 'zoom-in' );
-  item.classList.add( 'zoom-out' );
-}
+// function applyZoomOut( item ) {
+//   item.classList.remove( 'zoom-in' );
+//   item.classList.add( 'zoom-out' );
+// }
 
-function zoom_out( yOffset ) {
-  if( yOffset == 0 ) {
-    zoomableDivs().forEach( applyZoomOut );
-  }
-}
+// function zoom_out( yOffset ) {
+//   if( yOffset == 0 ) {
+//     zoomableDivs().forEach( applyZoomOut );
+//   }
+// }
 
-function applyZoomIn( item ) {
-  item.classList.remove( 'zoom-out' );
-  item.classList.add( 'zoom-in' );  
-}
+// function applyZoomIn( item ) {
+//   item.classList.remove( 'zoom-out' );
+//   item.classList.add( 'zoom-in' );
+// }
 
-function zoom_in( yOffset ) {
-  if( yOffset > 2 ) {
-    zoomableDivs().forEach( applyZoomIn );
-  }
-}
+// function zoom_in( yOffset ) {
+//   if( yOffset > 2 ) {
+//     zoomableDivs().forEach( applyZoomIn );
+//   }
+// }
